@@ -53,9 +53,9 @@ const MyServices = () => {
 			id="service"
 			className="mt-24 flex flex-col gap-4 px-[5vw] md:px-[8vw] lg:px-[10vw]"
 		>
-			<p className="text-white flex items-center gap-3">
+			<p className="text-white text-[28px] font-[600] flex items-center gap-3">
 				<span className="text-black">
-					<IoIosExit className="w-8 h-8" />
+					<IoIosExit className="w-12 h-12" />
 				</span>{" "}
 				My Services
 			</p>
