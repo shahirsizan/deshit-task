@@ -63,7 +63,7 @@ const MyProjects = () => {
 	];
 
 	return (
-		<div className="px-[5vw] md:px-[8vw] lg:px-[10vw]">
+		<div className="mt-24 px-[5vw] md:px-[8vw] lg:px-[10vw]">
 			<p className="text-white text-[28px] font-[600] flex items-center gap-3 mb-8">
 				<span className="text-black">
 					<IoIosExit className="w-12 h-12" />
