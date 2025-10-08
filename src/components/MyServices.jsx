@@ -6,7 +6,9 @@ import service3image from "../assets/service3image.png";
 import service4image from "../assets/service4image.png";
 import service5image from "../assets/service5image.png";
 import service6image from "../assets/service6image.png";
-import { FaArrowRight } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
+
+import ServiceCard from "./ServiceCard";
 
 const MyServices = () => {
 	const services = [
@@ -51,16 +53,16 @@ const MyServices = () => {
 	return (
 		<div
 			id="service"
-			className="mt-24 flex flex-col gap-4 px-[5vw] md:px-[8vw] lg:px-[10vw]"
+			className="mt-24 scroll-mt-12 flex flex-col gap-4 px-[5vw] md:px-[8vw] lg:px-[10vw]"
 		>
-			<p className="text-white text-[28px] font-[600] flex items-center gap-3">
+			<p className="text-white text-4xl font-[600] flex items-center gap-3">
 				<span className="text-black">
-					<IoIosExit className="w-12 h-12" />
+					<IoIosArrowForward className="w-14 h-14 text-white" />
 				</span>{" "}
 				My Services
 			</p>
 
-			<p className="text-white">
+			<p className="text-[#DBB9B9BA] px-5">
 				I am a highly experienced Full-Stack Mobile App Developer with
 				over seven years in the industry. I specialize in Flutter for
 				mobile development and Node.js for backend solutions. With a
@@ -70,29 +72,9 @@ const MyServices = () => {
 				efficient backend systems.
 			</p>
 
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 				{services.map((service, idx) => {
-					return (
-						<div
-							key={idx}
-							className="space-y-4 p-3 rounded-xl text-white bg-[#11111F] hover:bg-gradient-to-b hover:from-[#B94A5B] hover:via-[#6A4FFF] hover:to-[#6A4FFF]"
-						>
-							<div className="w-20 h-20 p-2 rounded-2xl overflow-hidden bg-gradient-to-b from-[#B94A5B] to-[#6A4FFF]">
-								<img src={service.image} className="w-full" />
-							</div>
-
-							<p>{service.name}</p>
-
-							<p>{service.desc}</p>
-
-							<button className="flex items-center">
-								Learn more
-								<span>
-									<FaArrowRight />
-								</span>
-							</button>
-						</div>
-					);
+					return <ServiceCard service={service} idx={idx} />;
 				})}
 			</div>
 		</div>
