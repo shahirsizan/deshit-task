@@ -1,5 +1,6 @@
 import React from "react";
-import { IoIosExit } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
+import ProjectCard from "./ProjectCard";
 
 import img1 from "../assets/projectsImage/1.png";
 import img2 from "../assets/projectsImage/2.png";
@@ -63,51 +64,26 @@ const MyProjects = () => {
 	];
 
 	return (
-		<div className="mt-24 px-[5vw] md:px-[8vw] lg:px-[10vw]">
-			<p className="text-white text-[28px] font-[600] flex items-center gap-3 mb-8">
+		<div
+			id="projects"
+			className="mt-24 scroll-mt-12 px-[5vw] md:px-[8vw] lg:px-[10vw]"
+		>
+			<p className=" text-white text-4xl font-[600] flex items-center gap-3 mb-4">
 				<span className="text-black">
-					<IoIosExit className="w-12 h-12" />
+					<IoIosArrowForward className="w-14 h-14 text-white" />
 				</span>{" "}
 				My Recent Projects
 			</p>
 
-			<p className="font-[500] text[12px] text-[#DBB9B9BA]">
+			<p className="py-6 text-[#DBB9B9BA] px-5">
 				I want to become a skilled full stack developer, proficient in
 				both frontend and backend technologies. My goal is to build
 				visually appealing and high-performing web applications.
 			</p>
 
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+			<div className="grid grid-cols-1 md:grid-cols-2 xl:md:grid-cols-3 gap-3 md:gap-5">
 				{projects.map((project, idx) => {
-					return (
-						<div
-							key={idx}
-							className="flex flex-col p-4 rounded-2xl bg-[#11111F]"
-						>
-							<div className="w-full h-64 p-2 bg-white rounded-4xl overflow-hidden mb-5">
-								<img
-									src={project.image}
-									className="w-full h-64 object-contain"
-								/>
-							</div>
-
-							<div className="flex-1"></div>
-
-							<div className="flex flex-col gap-3">
-								<p className="font-[600] text-[12px] text-white">
-									{project.name}
-								</p>
-
-								<p className="font-[400] text-[10px] text-[#666666]">
-									{project.desc}
-								</p>
-
-								<button className="w-fit text-[#B94A5B] text-[10px] cursor-pointer">
-									Click to Visit →
-								</button>
-							</div>
-						</div>
-					);
+					return <ProjectCard project={project} ids={idx} />;
 				})}
 			</div>
 		</div>
