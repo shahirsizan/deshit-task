@@ -1,33 +1,97 @@
-import React from "react";
+import React, { useState } from "react";
+import { IoMenu } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
+
+const navLinks = [
+	{ name: "About", href: "#about" },
+	{ name: "Services", href: "#service" },
+	{ name: "Skills", href: "#skills" },
+	{ name: "Projects", href: "#projects" },
+	{ name: "Reviews", href: "#reviews" },
+	{ name: "Contact", href: "#contact" },
+];
 
 const Navbar = () => {
+	const [activeLink, setActiveLink] = useState("home");
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 	return (
 		<div
 			style={{
 				background: `linear-gradient(
 					to right,
-					#131339 0%,
+					#161641 0%,
 					#232369 25%,
-					#35359f 50%,
+					#2f2f8d 50%,
 					#232369 75%,
-					#060606 100%
+					#161641 100%
 				)`,
 			}}
-			className="text-white sticky top-0 border-b-2 flex items-center justify-between py-3 px-[5vw] md:px-[8vw] lg:px-[10vw]"
+			className="text-white sticky top-0 z-[100] border-b-1 border-b-gray-900 shadow-border flex items-center justify-between py-3 px-[5vw] md:px-[8vw] lg:px-[10vw]"
 		>
-			<div>
-				<span className="text-[#B94A5B]">ARAFAT</span> HOSSAIN SOBUJ
+			<div className="font-[700]">
+				<span className="text-[#B94A5B]">ARAFAT</span>
+				<span className="max-md:hidden"> HOSSAIN SOBUJ</span>
 			</div>
 
-			<div className="flex items-center gap-2">
-				<a href="#home">Home</a>
-				<a href="#about">About</a>
-				<a href="#skills">Skills</a>
-				<a href="#portfolio">Portfolio</a>
-				<a href="#service">Service</a>
-				<a href="#projects">Projects</a>
-				<a href="#contact">Contact</a>
+			<div className="hidden md:flex items-center space-x-4 font-[400]">
+				{navLinks.map((link, idx) => (
+					<a
+						key={idx}
+						href={link.href}
+						onClick={() => {
+							setActiveLink(link.name);
+						}}
+						className={`hover:text-[#B94A5B] transition duration-200 `}
+					>
+						{link.name}
+					</a>
+				))}
 			</div>
+
+			{/* MOBILE HAMBURGER/CLOSE ICON */}
+			<div className="md:hidden z-[100]">
+				<button
+					onClick={() => {
+						setIsMenuOpen(!isMenuOpen);
+					}}
+					className="text-white text-3xl cursor-pointer"
+				>
+					{isMenuOpen ? <IoClose /> : <IoMenu />}
+				</button>
+			</div>
+
+			{/* MOBILE MENU PANEL (SLIDING) */}
+			<div
+				className={`
+                    fixed top-0 right-0 h-screen w-2/3 bg-[#161641] duration-500 ease-in-out shadow-xl
+                    flex flex-col items-center pt-24 space-y-8 md:hidden z-50 transition-transform
+                    ${isMenuOpen ? "translate-x-0" : "translate-x-full"}
+                `}
+			>
+				{navLinks.map((link, idx) => (
+					<a
+						key={idx}
+						href={link.href}
+						onClick={() => {
+							setIsMenuOpen(false);
+						}}
+						className="text-xl font-medium transition duration-200"
+					>
+						{link.name}
+					</a>
+				))}
+			</div>
+
+			{/* OVERLAY (for closing the menu by clicking outside) */}
+			{isMenuOpen && (
+				<div
+					className="fixed top-0 left-0 right-0 bottom-0 bg-black/50 z-49"
+					onClick={() => {
+						setIsMenuOpen(false);
+					}}
+				></div>
+			)}
 		</div>
 	);
 };
