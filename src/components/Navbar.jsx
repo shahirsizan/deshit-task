@@ -12,7 +12,6 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-	const [activeLink, setActiveLink] = useState("home");
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	return (
@@ -29,19 +28,16 @@ const Navbar = () => {
 			}}
 			className="text-white sticky top-0 z-[100] border-b-1 border-b-gray-900 shadow-border flex items-center justify-between py-3 px-[5vw] md:px-[8vw] lg:px-[10vw]"
 		>
-			<div className="font-[700]">
+			<div className="font-bold">
 				<span className="text-[#B94A5B]">ARAFAT</span>
 				<span className="max-md:hidden"> HOSSAIN SOBUJ</span>
 			</div>
 
-			<div className="hidden md:flex items-center space-x-4 font-[400]">
+			<div className="hidden md:flex items-center space-x-5 font-semibold text-sm text-base">
 				{navLinks.map((link, idx) => (
 					<a
 						key={idx}
 						href={link.href}
-						onClick={() => {
-							setActiveLink(link.name);
-						}}
 						className={`hover:text-[#B94A5B] transition duration-200 `}
 					>
 						{link.name}
@@ -49,7 +45,7 @@ const Navbar = () => {
 				))}
 			</div>
 
-			{/* MOBILE HAMBURGER/CLOSE ICON */}
+			{/* MOBILE HAMBURGER ICON */}
 			<div className="md:hidden z-[100]">
 				<button
 					onClick={() => {
