@@ -263,34 +263,42 @@ const Hero = () => {
 			</div>
 
 			{/* BOTTOM */}
-			<div className="mt-24 flex items-center justify-around text-white px-7 py-5 rounded-3xl min-h-[100px] bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF]">
-				<div className="flex flex-col items-start space-y-3">
-					<CiCalendar className="text-3xl" />
-					<span className="text-3xl">9+</span>
+			<div className="mt-24 flex flex-col md:flex-row md:gap-5 items-center md:justify-between text-white px-5 py-4 md:px-7 md:py-6 rounded-3xl bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF]">
+				<div className="flex flex-col space-y-1 md:space-y-3 pb-6 items-center md:items-start">
+					<CiCalendar className="max-md:hidden text-3xl" />
+					<span className="text-xl md:text-3xl font-semibold">
+						9+
+					</span>
 					<span className="font-[700] text-xl text-[#FFFFFF87]">
-						Years Of Experience
+						Years of Experience
 					</span>
 				</div>
-				<div className="flex flex-col items-start space-y-3 ">
-					<CiLaptop className="text-3xl" />
-					<span className="text-3xl">40+ </span>
+				<div className="flex flex-col space-y-1 md:space-y-3 pb-6 items-center md:items-start ">
+					<CiLaptop className="max-md:hidden text-3xl" />
+					<span className="text-xl md:text-3xl font-semibold">
+						40+{" "}
+					</span>
 					<span className="font-[700] text-xl text-[#FFFFFF87]">
-						Project Completed
+						Projects Completed
 					</span>
 				</div>
-				<div className="flex flex-col items-start space-y-3">
-					<FaRegSmile className="text-3xl" />
-					<span className="text-3xl">300+ </span>
+				<div className="flex flex-col space-y-1 md:space-y-3 pb-6 items-center md:items-start">
+					<FaRegSmile className="max-md:hidden text-3xl" />
+					<span className="text-xl md:text-3xl font-semibold">
+						300+{" "}
+					</span>
 					<span className="font-[700] text-xl text-[#FFFFFF87]">
 						Satisfied Client
 					</span>
 				</div>
 
-				<div className="flex flex-col items-start space-y-3">
-					<SlBadge className="text-3xl" />
-					<span className="text-3xl">18+ </span>
+				<div className="flex flex-col space-y-1 md:space-y-3 pb-6 items-center md:items-start">
+					<SlBadge className="max-md:hidden text-3xl" />
+					<span className="text-xl md:text-3xl font-semibold">
+						18+{" "}
+					</span>
 					<span className="font-[700] text-xl text-[#FFFFFF87]">
-						Award Winner
+						Award Won
 					</span>
 				</div>
 			</div>
