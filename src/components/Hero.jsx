@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
@@ -8,76 +8,247 @@ import { CiCalendar } from "react-icons/ci";
 import { CiLaptop } from "react-icons/ci";
 import { FaRegSmile } from "react-icons/fa";
 import { SlBadge } from "react-icons/sl";
-
 import heroPortrait from "../assets/heroPortrait.png";
+import heroEllipse1 from "../assets/heroEllipse1.png";
+import heroEllipse2 from "../assets/heroEllipse2.png";
+import grayEllipse from "../assets/grayEllipse.png";
+import colorfulEllipse from "../assets/colorfulEllipse.png";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = () => {
+	const [hovered1, setHovered1] = useState(false);
+	const [hovered2, setHovered2] = useState(false);
+
 	return (
-		<div className="px-[5vw] md:px-[8vw] lg:px-[10vw]">
-			<div className="grid grid-cols-2">
-				<div className="flex flex-col space-y-5">
-					<p>
-						I am <span className="">ARAFAT</span> HOSSAIN SOBUJ
+		<div
+			id="about"
+			className="mt-12 scroll-mt-12 relative px-[5vw] md:px-[8vw] lg:px-[10vw]"
+		>
+			<div className="grid grid-cols-1 md:grid-cols-2">
+				{/* LEFT */}
+				<div className="flex-1 order-2 md:order-1 items-center md:items-start flex flex-col space-y-10">
+					<p className="font-[700] text-lg md:text-xl text-white pt-4 whitespace-nowrap">
+						I am <span className="text-[#B94A5B]">ARAFAT</span>{" "}
+						HOSSAIN SOBUJ
 					</p>
 
-					<p className="bg-gray-600 text-white p-3">
-						Full-Stack Mobile App Developer | 9+ Years Experience
-						<br />
-						Expert in Flutter & Node.js | 40+ Successful Projects
-						Delivered
+					<p className=" bg-[#2A2A3A94] rounded-lg text-[#FFFFFF] text-xs md:text-lg md:font-[700] py-4 px-5">
+						Full-Stack Mobile App Developer <br />
+						9+ Years Experience <br />
+						40+ Projects Delivered
 					</p>
 
-					<p>
-						Maximize Your Business Potential with Custom Web
-						Development Solutions!{" "}
-					</p>
+					<div className="flex flex-col space-y-4">
+						<p className=" text-white font-[600] text-sm text-center md:text-start md:text-2xl">
+							Maximize Your Business
+							<br />
+							<span className="text-[#B94A5B]">
+								Potential
+							</span>{" "}
+							with Custom Web
+							<br />
+							Development{" "}
+							<span className="text-[#6A4FFF]">Solutions!</span>
+						</p>
 
-					<p>
-						Take your business to the next level with custom web
-						development solutions.
-					</p>
+						<p className="text-sm text-[#DBB9B9] text-center md:text-start">
+							Take your business to the next level with
+							<br /> custom web development solutions.
+						</p>
+					</div>
 
-					<div className="flex items-center">
-						<button className="flex items-center gap-2 border px-3 py-2 text-white">
-							Get in touch
-							<span>
-								<FaArrowRight />
-							</span>
-						</button>
-						<button className="flex items-center gap-2 border px-3 py-2 text-white">
-							Download CV{" "}
-							<span>
-								<FaArrowRight />
-							</span>
-						</button>
+					{/* BUTTONS */}
+					<div className="flex flex-col md:flex-row items-center gap-5">
+						{/* BUTTON 1 */}
+						<motion.button
+							className="px-8 py-3 font-semibold border-2 border-gray-800  overflow-hidden text-white bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF] rounded-md cursor-pointer"
+							initial={{}}
+							whileHover={{
+								scale: 1.05,
+							}}
+							transition={{ duration: 0.3 }}
+							onMouseEnter={() => {
+								setHovered1(true);
+							}}
+							onMouseLeave={() => {
+								setHovered1(false);
+							}}
+						>
+							{/* TEXT */}
+							<motion.span
+								initial={{ y: 0 }}
+								whileHover={{
+									transition: {
+										type: "spring",
+										stiffness: 200,
+										damping: 10,
+									},
+								}}
+								className=" z-10 flex items-center gap-2"
+							>
+								{/* LEFT ICON */}
+								<div className="w-5 flex justify-center items-center">
+									<AnimatePresence>
+										{!hovered1 && (
+											<motion.div
+												initial={{ x: -20 }}
+												animate={{ x: 0 }}
+												exit={{ x: -120 }}
+												transition={{
+													duration: 0.2,
+												}}
+											>
+												<FaArrowRight />
+											</motion.div>
+										)}
+									</AnimatePresence>
+								</div>{" "}
+								{/* TEXT */}
+								<span className="whitespace-nowrap">
+									Get in touch
+								</span>
+								{/* RIGHT ICON */}
+								<div className="w-5 flex justify-center">
+									<AnimatePresence>
+										{hovered1 && (
+											<motion.div
+												initial={{ x: 120 }}
+												animate={{ x: 0 }}
+												exit={{ x: 120 }}
+												transition={{
+													duration: 0.2,
+												}}
+											>
+												<FaArrowRight />
+											</motion.div>
+										)}
+									</AnimatePresence>
+								</div>
+							</motion.span>
+						</motion.button>
+
+						{/* BUTTON 2 */}
+						<motion.button
+							className="px-8 py-3 font-semibold border-2 border-gray-800 overflow-hidden text-white bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF] rounded-md cursor-pointer"
+							initial={{}}
+							whileHover={{
+								scale: 1.05,
+							}}
+							transition={{ duration: 0.3 }}
+							onMouseEnter={() => {
+								setHovered2(true);
+							}}
+							onMouseLeave={() => {
+								setHovered2(false);
+							}}
+						>
+							{/* Text */}
+							<motion.span
+								initial={{ y: 0 }}
+								whileHover={{
+									transition: {
+										type: "spring",
+										stiffness: 200,
+										damping: 10,
+									},
+								}}
+								className=" z-10 flex items-center gap-2"
+							>
+								{/* LEFT ICON */}
+								<div className="w-5 flex justify-center items-center">
+									<AnimatePresence>
+										{!hovered2 && (
+											<motion.div
+												initial={{ x: -20 }}
+												animate={{ x: 0 }}
+												exit={{ x: -120 }}
+												transition={{
+													duration: 0.2,
+												}}
+											>
+												<FaArrowRight />
+											</motion.div>
+										)}
+									</AnimatePresence>
+								</div>{" "}
+								<span className="whitespace-nowrap">
+									Download CV
+								</span>
+								{/* RIGHT ICON */}
+								<div className="w-5 flex justify-center">
+									<AnimatePresence>
+										{hovered2 && (
+											<motion.div
+												initial={{ x: 120 }}
+												animate={{ x: 0 }}
+												exit={{ x: 120 }}
+												transition={{
+													duration: 0.2,
+												}}
+											>
+												<FaArrowRight />
+											</motion.div>
+										)}
+									</AnimatePresence>
+								</div>
+							</motion.span>
+						</motion.button>
 					</div>
 				</div>
 
-				<div className="w-full rounded-full overflow-hidden">
-					<img src={heroPortrait} className="w-full h-auto" />
+				{/* RIGHT */}
+				<div className="flex-1 order-1 md:order-2 flex items-center justify-center w-full">
+					<div className="relative w-55 h-55 md:w-80 md:h-80 ">
+						<img
+							src={heroPortrait}
+							className="w-full h-full object-cover rounded-full border-8 border-blue-700"
+						/>
+						<img
+							src={heroEllipse1}
+							className="absolute z-50 top-1/2 -left-1/7 transform -translate-y-20  md:scale-150"
+						/>
+						<img
+							src={heroEllipse2}
+							className="absolute z-50 top-1/2  -right-1/5  transform -translate-y-20  md:scale-150"
+						/>
+						<img
+							src={grayEllipse}
+							className="absolute top-1/2 -right-1/6 md:-right-1/12  transform -translate-y-1/2 -translate-x-1/4 scale-105  md:scale-150"
+						/>
+					</div>
 				</div>
 			</div>
 
-			<div className="flex items-center justify-around text-white px-4 py-3 rounded-2xl min-h-[100px] bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF]">
-				<div>
-					<CiCalendar />
-					9+ <br />
-					Years Of Experience
+			{/* BOTTOM */}
+			<div className="mt-24 flex items-center justify-around text-white px-7 py-5 rounded-3xl min-h-[100px] bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF]">
+				<div className="flex flex-col items-start space-y-3">
+					<CiCalendar className="text-3xl" />
+					<span className="text-3xl">9+</span>
+					<span className="font-[700] text-xl text-[#FFFFFF87]">
+						Years Of Experience
+					</span>
 				</div>
-				<div>
-					<CiLaptop />
-					40+ <br />
-					Project Completed
+				<div className="flex flex-col items-start space-y-3 ">
+					<CiLaptop className="text-3xl" />
+					<span className="text-3xl">40+ </span>
+					<span className="font-[700] text-xl text-[#FFFFFF87]">
+						Project Completed
+					</span>
 				</div>
-				<div>
-					<FaRegSmile />
-					300+ <br />
-					Satisfied Client
+				<div className="flex flex-col items-start space-y-3">
+					<FaRegSmile className="text-3xl" />
+					<span className="text-3xl">300+ </span>
+					<span className="font-[700] text-xl text-[#FFFFFF87]">
+						Satisfied Client
+					</span>
 				</div>
-				<div>
-					<SlBadge />
-					18+ <br />
-					Award Winner
+
+				<div className="flex flex-col items-start space-y-3">
+					<SlBadge className="text-3xl" />
+					<span className="text-3xl">18+ </span>
+					<span className="font-[700] text-xl text-[#FFFFFF87]">
+						Award Winner
+					</span>
 				</div>
 			</div>
 		</div>
