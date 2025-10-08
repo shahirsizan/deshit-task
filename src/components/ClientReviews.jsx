@@ -3,6 +3,7 @@ import { IoIosExit } from "react-icons/io";
 import { FaQuoteRight } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
 
 import {
 	Card,
@@ -70,21 +71,24 @@ const ClientReviews = () => {
 	];
 
 	return (
-		<div className="mt-24 px-[5vw] md:px-[8vw] lg:px-[10vw]">
-			<p className="text-white text-[28px] font-[600] flex items-center gap-3 mb-8">
+		<div
+			id="reviews"
+			className="mt-24 scroll-mt-12 px-[5vw] md:px-[8vw] lg:px-[10vw]"
+		>
+			<p className="text-white text-4xl font-[600] flex items-center gap-3 mb-8">
 				<span className="text-black">
-					<IoIosExit className="w-12 h-12" />
+					<IoIosArrowForward className="w-14 h-14 text-white" />
 				</span>{" "}
 				Client Reviews
 			</p>
 
-			<div>
+			<div className="flex items-center justify-center">
 				<Carousel
 					opts={{
 						align: "start",
 						loop: true,
 					}}
-					className="w-full"
+					className="w-[70%] md:w-11/12"
 				>
 					<CarouselContent>
 						{clientReviews.map((item) => (
@@ -92,11 +96,11 @@ const ClientReviews = () => {
 								key={item.id}
 								className="md:basis-1/2 lg:basis-1/3"
 							>
-								<Card className="bg-[#4C4C4C3B]/80 text-white border border-gray-400/60 h-full flex flex-col justify-between">
+								<Card className="bg-[#4C4C4C]/30 text-white border border-gray-500/60 h-full flex flex-col justify-between gap-2 md:gap-6 py-2 sm:py-6">
 									{/* CARD HEADER */}
 									<CardHeader>
-										<div className="flex flex-col space-y-5">
-											<FaQuoteRight className="text-[#B94A5B] text-2xl" />
+										<div className="flex flex-col space-y-2 md:space-y-5">
+											<FaQuoteRight className="text-[#B94A5B] text-md md:text-2xl" />
 
 											<div className="flex">
 												{Array.from(
@@ -105,12 +109,12 @@ const ClientReviews = () => {
 														i < item.stars ? (
 															<FaStar
 																key={i}
-																className="text-[#B94A5B] size-6"
+																className="text-[#B94A5B] text-md md:text-2xl"
 															/>
 														) : (
 															<FaRegStar
 																key={i}
-																className="text-gray-500 size-6"
+																className="text-gray-500 text-md md:text-2xl"
 															/>
 														)
 												)}
@@ -119,7 +123,7 @@ const ClientReviews = () => {
 									</CardHeader>
 
 									{/* CARD CONTENT */}
-									<CardContent className="text-[#FFFFFF] font-[400] text-sm leading-relaxed px-4">
+									<CardContent className="text-[#FFFFFF] font-[400] text-xs md:text-md leading-relaxed px-2 sm:px-4">
 										{item.desc}
 									</CardContent>
 
@@ -128,15 +132,15 @@ const ClientReviews = () => {
 										<div className="flex items-center gap-3">
 											<img
 												src={item.clientzImage}
-												className="w-12 h-12 rounded-full object-cover border-2 border-[#B94A5B]"
+												className="w-6 h-6 md:w-12 md:h-12 rounded-full object-cover border-2 border-[#B94A5B]"
 											/>
 
 											<div>
-												<p className="text-white font-[700]">
+												<p className="text-white font-[700] text-xs md:text-md">
 													{item.clientName}
 												</p>
 
-												<p className="text-gray-400 font-[400]">
+												<p className="text-gray-400 font-[300] text-xs md:text-md">
 													{item.clientzDesignation}
 												</p>
 											</div>
@@ -147,8 +151,8 @@ const ClientReviews = () => {
 						))}
 					</CarouselContent>
 
-					<CarouselPrevious className=" text-white border-gray-600 bg-gradient-to-b from-[#F94A5B] to-[#6A4FFF] cursor-pointer hover:scale-110 transition-all duration-200 -bottom-1/2" />
-					<CarouselNext className="text-white border-gray-600 bg-gradient-to-b from-[#F94A5B] to-[#6A4FFF] cursor-pointer hover:scale-110 transition-all duration-200" />
+					<CarouselPrevious className="size-6 md:size-10 text-white border-gray-600 bg-gradient-to-b from-[#F94A5B] to-[#6A4FFF] cursor-pointer hover:scale-110 transition-all duration-200 -bottom-1/2" />
+					<CarouselNext className="size-6 md:size-10 text-white border-gray-600 bg-gradient-to-b from-[#F94A5B] to-[#6A4FFF] cursor-pointer hover:scale-110 transition-all duration-200" />
 				</Carousel>
 			</div>
 		</div>
