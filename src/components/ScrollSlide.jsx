@@ -1,6 +1,9 @@
 import React, { cloneElement, useEffect, useRef } from "react";
 
 const ScrollSlide = ({ children }) => {
+	// This animation causes a white stripe to the right/left side of the entire webpage
+	// because of those X-translates.
+
 	const ref = useRef(null);
 
 	useEffect(() => {

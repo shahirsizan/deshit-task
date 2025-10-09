@@ -52,7 +52,7 @@ const Hero = () => {
 				id="about"
 				className="mt-12 scroll-mt-12 relative px-[5vw] md:px-[8vw] lg:px-[10vw]"
 			>
-				{/* <div
+				<div
 					className="absolute w-4 h-4 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 animate-float1 z-20"
 					style={{ top: "10%", left: "5%" }}
 				></div>
@@ -79,7 +79,7 @@ const Hero = () => {
 				<div
 					className="absolute w-5 h-5 rounded-full bg-gradient-to-br from-yellow-200 to-green-500 animate-float3 z-20"
 					style={{ top: "10%", right: "40%" }}
-				></div> */}
+				></div>
 
 				<div className="grid grid-cols-1 md:grid-cols-2">
 					{/* LEFT */}
