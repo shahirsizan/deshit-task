@@ -24,6 +24,7 @@ import img2 from "../assets/clientImage/2.png";
 import img3 from "../assets/clientImage/3.png";
 import img4 from "../assets/clientImage/4.png";
 import img5 from "../assets/clientImage/5.png";
+import ScrollSlide from "./ScrollSlide";
 
 const ClientReviews = () => {
 	const clientReviews = [
@@ -82,79 +83,83 @@ const ClientReviews = () => {
 				Client Reviews
 			</p>
 
-			<div className="slidingAnimation flex items-center justify-center">
-				<Carousel
-					opts={{
-						align: "start",
-						loop: true,
-					}}
-					className="w-[70%] md:w-11/12"
-				>
-					<CarouselContent>
-						{clientReviews.map((item) => (
-							<CarouselItem
-								key={item.id}
-								className="md:basis-1/2 lg:basis-1/3"
-							>
-								<Card className="bg-[#4C4C4C]/30 text-white border border-gray-500/60 h-full flex flex-col justify-between gap-2 md:gap-6 py-2 sm:py-6">
-									{/* CARD HEADER */}
-									<CardHeader>
-										<div className="flex flex-col space-y-2 md:space-y-5">
-											<FaQuoteRight className="text-[#B94A5B] text-md md:text-2xl" />
+			<ScrollSlide>
+				<div className="slidingAnimation flex items-center justify-center">
+					<Carousel
+						opts={{
+							align: "start",
+							loop: true,
+						}}
+						className="w-[70%] md:w-11/12"
+					>
+						<CarouselContent>
+							{clientReviews.map((item) => (
+								<CarouselItem
+									key={item.id}
+									className="md:basis-1/2 lg:basis-1/3"
+								>
+									<Card className="bg-[#4C4C4C]/30 text-white border border-gray-500/60 h-full flex flex-col justify-between gap-2 md:gap-6 py-2 sm:py-6">
+										{/* CARD HEADER */}
+										<CardHeader>
+											<div className="flex flex-col space-y-2 md:space-y-5">
+												<FaQuoteRight className="text-[#B94A5B] text-md md:text-2xl" />
 
-											<div className="flex">
-												{Array.from(
-													{ length: 5 },
-													(_, i) =>
-														i < item.stars ? (
-															<FaStar
-																key={i}
-																className="text-[#B94A5B] text-md md:text-2xl"
-															/>
-														) : (
-															<FaRegStar
-																key={i}
-																className="text-gray-500 text-md md:text-2xl"
-															/>
-														)
-												)}
+												<div className="flex">
+													{Array.from(
+														{ length: 5 },
+														(_, i) =>
+															i < item.stars ? (
+																<FaStar
+																	key={i}
+																	className="text-[#B94A5B] text-md md:text-2xl"
+																/>
+															) : (
+																<FaRegStar
+																	key={i}
+																	className="text-gray-500 text-md md:text-2xl"
+																/>
+															)
+													)}
+												</div>
 											</div>
-										</div>
-									</CardHeader>
+										</CardHeader>
 
-									{/* CARD CONTENT */}
-									<CardContent className="text-[#FFFFFF] font-[400] text-xs md:text-md leading-relaxed px-2 sm:px-4">
-										{item.desc}
-									</CardContent>
+										{/* CARD CONTENT */}
+										<CardContent className="text-[#FFFFFF] font-[400] text-xs md:text-md leading-relaxed px-2 sm:px-4">
+											{item.desc}
+										</CardContent>
 
-									{/* CARD FOOTER */}
-									<CardFooter>
-										<div className="flex items-center gap-3">
-											<img
-												src={item.clientzImage}
-												className="w-6 h-6 md:w-12 md:h-12 rounded-full object-cover border-2 border-[#B94A5B]"
-											/>
+										{/* CARD FOOTER */}
+										<CardFooter>
+											<div className="flex items-center gap-3">
+												<img
+													src={item.clientzImage}
+													className="w-6 h-6 md:w-12 md:h-12 rounded-full object-cover border-2 border-[#B94A5B]"
+												/>
 
-											<div>
-												<p className="text-white font-[700] text-xs md:text-md">
-													{item.clientName}
-												</p>
+												<div>
+													<p className="text-white font-[700] text-xs md:text-md">
+														{item.clientName}
+													</p>
 
-												<p className="text-gray-400 font-[300] text-xs md:text-md">
-													{item.clientzDesignation}
-												</p>
+													<p className="text-gray-400 font-[300] text-xs md:text-md">
+														{
+															item.clientzDesignation
+														}
+													</p>
+												</div>
 											</div>
-										</div>
-									</CardFooter>
-								</Card>
-							</CarouselItem>
-						))}
-					</CarouselContent>
+										</CardFooter>
+									</Card>
+								</CarouselItem>
+							))}
+						</CarouselContent>
 
-					<CarouselPrevious className="size-6 sm:size-8 md:size-10 text-white border-gray-600 bg-gradient-to-b from-[#F94A5B] to-[#6A4FFF] cursor-pointer hover:scale-110 transition-all duration-200 -bottom-1/2" />
-					<CarouselNext className="size-6 sm:size-8 md:size-10 text-white border-gray-600 bg-gradient-to-b from-[#F94A5B] to-[#6A4FFF] cursor-pointer hover:scale-110 transition-all duration-200" />
-				</Carousel>
-			</div>
+						<CarouselPrevious className="size-6 sm:size-8 md:size-10 text-white border-gray-600 bg-gradient-to-b from-[#F94A5B] to-[#6A4FFF] cursor-pointer hover:scale-110 transition-all duration-200 -bottom-1/2" />
+						<CarouselNext className="size-6 sm:size-8 md:size-10 text-white border-gray-600 bg-gradient-to-b from-[#F94A5B] to-[#6A4FFF] cursor-pointer hover:scale-110 transition-all duration-200" />
+					</Carousel>
+				</div>
+			</ScrollSlide>
 		</div>
 	);
 };

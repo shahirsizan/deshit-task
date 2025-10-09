@@ -1,6 +1,6 @@
 import React, { cloneElement, useEffect, useRef } from "react";
 
-const ScrollFadeIn = ({ children }) => {
+const ScrollSlide = ({ children }) => {
 	const ref = useRef(null);
 
 	useEffect(() => {
@@ -8,13 +8,13 @@ const ScrollFadeIn = ({ children }) => {
 			([entry]) => {
 				// when getting inside the viewport
 				if (entry.isIntersecting && ref.current) {
-					ref.current.classList.remove("animate-fadeout");
-					ref.current.classList.add("animate-fadein");
+					ref.current.classList.remove("animate-slideOut");
+					ref.current.classList.add("animate-slideIn");
 				}
 				// when stepping outside the viewport
 				else {
-					ref.current.classList.remove("animate-fadein");
-					ref.current.classList.add("animate-fadeout");
+					ref.current.classList.remove("animate-slideIn");
+					ref.current.classList.add("animate-slideOut");
 				}
 			},
 			{
@@ -40,4 +40,4 @@ const ScrollFadeIn = ({ children }) => {
 	});
 };
 
-export default ScrollFadeIn;
+export default ScrollSlide;

@@ -1,5 +1,7 @@
 import React from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
+import ScrollFadeIn from "./ScrollFadeIn";
+import ScrollSlide from "./ScrollSlide";
 
 const SkillsList = () => {
 	// 1. Motion Values to track mouse position
@@ -57,65 +59,67 @@ const SkillsList = () => {
 	];
 
 	return (
-		<motion.div
-			className="slidingAnimation md:w-1/2 bg-[#303030] flex flex-col space-y-3 p-2 rounded-xl hover:border-1 hover:border-white hover:border-t-gray-600/80 hover:border-r-gray-600/80"
-			// Pass the transformed motion values to the style prop
-			style={{ rotateX, rotateY, x: 0, y: 0 }} // x:0, y:0 is crucial to override default
-			// Use the helper functions for interaction
-			onMouseMove={(e) => {
-				handleMouseMove(e);
-			}}
-			onMouseLeave={() => {
-				handleMouseLeave();
-			}}
-			// Ensure smooth 3D perspective and transition when values change
-			transition={{ type: "tween", duration: 0.3 }}
-			whileHover={{ scale: 1.01 }} // Optional: Add a slight scale for visual feedback
-		>
-			<div className="flex flex-col gap-5 text-white p-3">
-				{skillSet.map((group, idx) => {
-					return (
-						<div
-							key={idx}
-							className="border border-gray-500/70 rounded-sm p-4"
-						>
-							<ul className="list-disc ml-5">
-								<li key={idx} className="mb-2">
-									{/* GROUP NAME */}
-									<span className="text-2xl font-bold">
-										{group.group}
-									</span>
+		<ScrollSlide>
+			<motion.div
+				className="slidingAnimation md:w-full bg-[#303030] flex flex-col space-y-3 p-2 rounded-xl hover:border-1 hover:border-white hover:border-t-gray-600/80 hover:border-r-gray-600/80"
+				// Pass the transformed motion values to the style prop
+				style={{ rotateX, rotateY, x: 0, y: 0 }} // x:0, y:0 is crucial to override default
+				// Use the helper functions for interaction
+				onMouseMove={(e) => {
+					handleMouseMove(e);
+				}}
+				onMouseLeave={() => {
+					handleMouseLeave();
+				}}
+				// Ensure smooth 3D perspective and transition when values change
+				transition={{ type: "tween", duration: 0.3 }}
+				whileHover={{ scale: 1.01 }} // Optional: Add a slight scale for visual feedback
+			>
+				<div className="flex flex-col gap-5 text-white p-3">
+					{skillSet.map((group, idx) => {
+						return (
+							<div
+								key={idx}
+								className="border border-gray-500/70 rounded-sm p-4"
+							>
+								<ul className="list-disc ml-5">
+									<li key={idx} className="mb-2">
+										{/* GROUP NAME */}
+										<span className="text-2xl font-bold">
+											{group.group}
+										</span>
 
-									{/* SUBGROUPS */}
-									{group.subgroups.map(
-										(subGroup, subIndex) => {
-											// JOIN THE SKILLS INTO A COMMA SEPERATED ARRAY
-											const skillsArray =
-												subGroup.skills.join(", ");
+										{/* SUBGROUPS */}
+										{group.subgroups.map(
+											(subGroup, subIndex) => {
+												// JOIN THE SKILLS INTO A COMMA SEPERATED ARRAY
+												const skillsArray =
+													subGroup.skills.join(", ");
 
-											return (
-												<li key={subIndex}>
-													{/* SUBGROUP NAME */}
-													<span className="text-xl font-semibold">
-														{subGroup.name}:{" "}
-													</span>
+												return (
+													<li key={subIndex}>
+														{/* SUBGROUP NAME */}
+														<span className="text-xl font-semibold">
+															{subGroup.name}:{" "}
+														</span>
 
-													{/* SKILLS ARRAY */}
-													<span className="text-white/60 ">
-														{skillsArray}
-													</span>
-												</li>
-											);
-										}
-									)}
-								</li>
-							</ul>
-						</div>
-					);
-				})}
-			</div>
-			<div></div>
-		</motion.div>
+														{/* SKILLS ARRAY */}
+														<span className="text-white/60 ">
+															{skillsArray}
+														</span>
+													</li>
+												);
+											}
+										)}
+									</li>
+								</ul>
+							</div>
+						);
+					})}
+				</div>
+				<div></div>
+			</motion.div>
+		</ScrollSlide>
 	);
 };
 

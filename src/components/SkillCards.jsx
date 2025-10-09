@@ -10,6 +10,8 @@ import git from "../assets/git.png";
 import mongodb from "../assets/mongodb.png";
 import vercel from "../assets/vercel.png";
 import postman from "../assets/postman.png";
+import ScrollFadeIn from "./ScrollFadeIn";
+import ScrollSlide from "./ScrollSlide";
 
 const skills = [
 	{ id: 1, name: "javascript", image: javascript },
@@ -55,32 +57,37 @@ const SkillCards = () => {
 	};
 
 	return (
-		<motion.div
-			className="slidingAnimation md:w-1/2 bg-[#303030] flex flex-wrap gap-3 md:gap-4 p-3 py-4 md:p-4 md:py-5 rounded-xl hover:border-1 hover:border-white hover:border-l-gray-600/80 hover:border-b-gray-600/80"
-			// Pass the transformed motion values to the style prop
-			style={{ rotateX, rotateY, x: 0, y: 0 }} // x:0, y:0 is crucial to override default
-			// Use the helper functions for interaction
-			onMouseMove={(e) => {
-				handleMouseMove(e);
-			}}
-			onMouseLeave={() => {
-				handleMouseLeave();
-			}}
-			// Ensure smooth 3D perspective and transition when values change
-			transition={{ type: "tween", duration: 0.3 }}
-			whileHover={{ scale: 1.01 }} // Optional: Add a slight scale for visual feedback
-		>
-			{skills.map((skill, idx) => {
-				return (
-					<div key={idx} className="flex items-center justify-center">
-						<img
-							src={skill.image}
-							className="w-10 sm:w-12 md:w-14 xl:w-16 rounded-2xl overflow-hidden"
-						/>
-					</div>
-				);
-			})}
-		</motion.div>
+		<ScrollSlide>
+			<motion.div
+				className="slidingAnimation md:w-full bg-[#303030] flex flex-wrap gap-3 md:gap-4 p-3 py-4 md:p-4 md:py-5 rounded-xl hover:border-1 hover:border-white hover:border-l-gray-600/80 hover:border-b-gray-600/80"
+				// Pass the transformed motion values to the style prop
+				style={{ rotateX, rotateY, x: 0, y: 0 }} // x:0, y:0 is crucial to override default
+				// Use the helper functions for interaction
+				onMouseMove={(e) => {
+					handleMouseMove(e);
+				}}
+				onMouseLeave={() => {
+					handleMouseLeave();
+				}}
+				// Ensure smooth 3D perspective and transition when values change
+				transition={{ type: "tween", duration: 0.3 }}
+				whileHover={{ scale: 1.01 }} // Optional: Add a slight scale for visual feedback
+			>
+				{skills.map((skill, idx) => {
+					return (
+						<div
+							key={idx}
+							className="flex items-center justify-center"
+						>
+							<img
+								src={skill.image}
+								className="w-10 sm:w-12 md:w-14 xl:w-16 rounded-2xl overflow-hidden"
+							/>
+						</div>
+					);
+				})}
+			</motion.div>
+		</ScrollSlide>
 	);
 };
 

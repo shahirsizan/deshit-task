@@ -11,6 +11,7 @@ import heroPortrait from "../assets/heroPortrait.png";
 import heroEllipse1 from "../assets/heroEllipse1.png";
 import heroEllipse2 from "../assets/heroEllipse2.png";
 import grayEllipse from "../assets/grayEllipse.png";
+import ScrollFadeIn from "./ScrollFadeIn";
 
 const Hero = () => {
 	const [hovered1, setHovered1] = useState(false);
@@ -46,229 +47,233 @@ const Hero = () => {
 	};
 
 	return (
-		<div
-			id="about"
-			className="fadeInAnimation mt-12 scroll-mt-12 relative px-[5vw] md:px-[8vw] lg:px-[10vw]"
-		>
-			<div className="grid grid-cols-1 md:grid-cols-2">
-				{/* LEFT */}
-				<div className="flex-1 order-2 md:order-1 items-center md:items-start flex flex-col space-y-10">
-					<p className="font-[700] text-lg sm:text-4xl text-white pt-4 whitespace-nowrap">
-						I am <span className="text-[#B94A5B]">ARAFAT</span>{" "}
-						HOSSAIN SOBUJ
-					</p>
-
-					<p className=" bg-[#2A2A3A94] rounded-lg text-[#FFFFFF] text-xs sm:text-lg md:text-sm md:font-[600] tracking-widest leading-loose py-4 md:py-8 px-2 sm:px-4 lg:px-10 whitespace-nowrap">
-						<span>Full-Stack Mobile App Developer</span>
-						<span className="max-xl:hidden">{" | "}</span>
-						<br className="xl:hidden" />
-						<span>9+ Years Experience</span>
-
-						<br />
-
-						<span>Expert in Flutter & Node.js</span>
-						<span className="max-xl:hidden">{" | "}</span>
-						<br className="xl:hidden" />
-						<span>40+ Successful Projects Delivered</span>
-					</p>
-
-					<div className="flex flex-col space-y-4">
-						<p className=" text-white font-[600] text-sm sm:text-2xl xl:text-3xl text-center md:text-start ">
-							Maximize Your Business
-							<br />
-							<span className="text-[#B94A5B]">
-								Potential
-							</span>{" "}
-							with Custom Web
-							<br />
-							Development{" "}
-							<span className="text-[#6A4FFF]">Solutions!</span>
+		<ScrollFadeIn>
+			<div
+				id="about"
+				className="fadeInAnimation mt-12 scroll-mt-12 relative px-[5vw] md:px-[8vw] lg:px-[10vw]"
+			>
+				<div className="grid grid-cols-1 md:grid-cols-2">
+					{/* LEFT */}
+					<div className="flex-1 order-2 md:order-1 items-center md:items-start flex flex-col space-y-10">
+						<p className="font-[700] text-lg sm:text-4xl text-white pt-4 whitespace-nowrap">
+							I am <span className="text-[#B94A5B]">ARAFAT</span>{" "}
+							HOSSAIN SOBUJ
 						</p>
 
-						<p className="text-sm sm:text-lg xl:text-2xl text-[#DBB9B9] text-center md:text-start">
-							Take your business to the next level with
-							<br /> custom web development solutions.
-						</p>
-					</div>
+						<p className=" bg-[#2A2A3A94] rounded-lg text-[#FFFFFF] text-xs sm:text-lg md:text-sm md:font-[600] tracking-widest leading-loose py-4 md:py-8 px-2 sm:px-4 lg:px-10 whitespace-nowrap">
+							<span>Full-Stack Mobile App Developer</span>
+							<span className="max-xl:hidden">{" | "}</span>
+							<br className="xl:hidden" />
+							<span>9+ Years Experience</span>
 
-					{/* BUTTONS */}
-					<div className="flex flex-col sm:flex-row items-center gap-5">
-						{/* BUTTON 1 */}
-						<motion.button
-							className="px-8 py-3 font-semibold border-2 border-gray-800  overflow-hidden text-white bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF] rounded-md cursor-pointer
+							<br />
+
+							<span>Expert in Flutter & Node.js</span>
+							<span className="max-xl:hidden">{" | "}</span>
+							<br className="xl:hidden" />
+							<span>40+ Successful Projects Delivered</span>
+						</p>
+
+						<div className="flex flex-col space-y-4">
+							<p className=" text-white font-[600] text-sm sm:text-2xl xl:text-3xl text-center md:text-start ">
+								Maximize Your Business
+								<br />
+								<span className="text-[#B94A5B]">
+									Potential
+								</span>{" "}
+								with Custom Web
+								<br />
+								Development{" "}
+								<span className="text-[#6A4FFF]">
+									Solutions!
+								</span>
+							</p>
+
+							<p className="text-sm sm:text-lg xl:text-2xl text-[#DBB9B9] text-center md:text-start">
+								Take your business to the next level with
+								<br /> custom web development solutions.
+							</p>
+						</div>
+
+						{/* BUTTONS */}
+						<div className="flex flex-col sm:flex-row items-center gap-5">
+							{/* BUTTON 1 */}
+							<motion.button
+								className="px-8 py-3 font-semibold border-2 border-gray-800  overflow-hidden text-white bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF] rounded-md cursor-pointer
 							hover:border-2 hover:border-white hover:border-l-gray-600/80 hover:border-b-gray-600/80"
-							initial={{}}
-							whileHover={{
-								scale: 1.05,
-							}}
-							transition={{ duration: 0.3 }}
-							onMouseEnter={() => {
-								setHovered1(true);
-							}}
-							onMouseLeave={() => {
-								setHovered1(false);
-							}}
-						>
-							{/* TEXT */}
-							<motion.span
-								initial={{ y: 0 }}
+								initial={{}}
 								whileHover={{
-									transition: {
-										type: "spring",
-										stiffness: 200,
-										damping: 10,
-									},
+									scale: 1.05,
 								}}
-								className=" z-10 flex items-center gap-2"
+								transition={{ duration: 0.3 }}
+								onMouseEnter={() => {
+									setHovered1(true);
+								}}
+								onMouseLeave={() => {
+									setHovered1(false);
+								}}
 							>
-								{/* LEFT ICON */}
-								<div className="w-5 flex justify-center items-center">
-									<AnimatePresence>
-										{!hovered1 && (
-											<motion.div
-												initial={{ x: -20 }}
-												animate={{ x: 0 }}
-												exit={{ x: -120 }}
-												transition={{
-													duration: 0.2,
-												}}
-											>
-												<FaArrowRight />
-											</motion.div>
-										)}
-									</AnimatePresence>
-								</div>{" "}
 								{/* TEXT */}
-								<span className="whitespace-nowrap">
-									Get in touch
-								</span>
-								{/* RIGHT ICON */}
-								<div className="w-5 flex justify-center">
-									<AnimatePresence>
-										{hovered1 && (
-											<motion.div
-												initial={{ x: 120 }}
-												animate={{ x: 0 }}
-												exit={{ x: 120 }}
-												transition={{
-													duration: 0.2,
-												}}
-											>
-												<FaArrowRight />
-											</motion.div>
-										)}
-									</AnimatePresence>
-								</div>
-							</motion.span>
-						</motion.button>
+								<motion.span
+									initial={{ y: 0 }}
+									whileHover={{
+										transition: {
+											type: "spring",
+											stiffness: 200,
+											damping: 10,
+										},
+									}}
+									className=" z-10 flex items-center gap-2"
+								>
+									{/* LEFT ICON */}
+									<div className="w-5 flex justify-center items-center">
+										<AnimatePresence>
+											{!hovered1 && (
+												<motion.div
+													initial={{ x: -20 }}
+													animate={{ x: 0 }}
+													exit={{ x: -120 }}
+													transition={{
+														duration: 0.2,
+													}}
+												>
+													<FaArrowRight />
+												</motion.div>
+											)}
+										</AnimatePresence>
+									</div>{" "}
+									{/* TEXT */}
+									<span className="whitespace-nowrap">
+										Get in touch
+									</span>
+									{/* RIGHT ICON */}
+									<div className="w-5 flex justify-center">
+										<AnimatePresence>
+											{hovered1 && (
+												<motion.div
+													initial={{ x: 120 }}
+													animate={{ x: 0 }}
+													exit={{ x: 120 }}
+													transition={{
+														duration: 0.2,
+													}}
+												>
+													<FaArrowRight />
+												</motion.div>
+											)}
+										</AnimatePresence>
+									</div>
+								</motion.span>
+							</motion.button>
 
-						{/* BUTTON 2 */}
-						<motion.button
-							className="px-8 py-3 font-semibold border-2 border-gray-800 overflow-hidden text-white bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF] rounded-md cursor-pointer
+							{/* BUTTON 2 */}
+							<motion.button
+								className="px-8 py-3 font-semibold border-2 border-gray-800 overflow-hidden text-white bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF] rounded-md cursor-pointer
 							hover:border-2 hover:border-white hover:border-l-gray-600/80 hover:border-b-gray-600/80"
-							initial={{}}
-							whileHover={{
-								scale: 1.05,
-							}}
-							transition={{ duration: 0.3 }}
-							onMouseEnter={() => {
-								setHovered2(true);
-							}}
-							onMouseLeave={() => {
-								setHovered2(false);
-							}}
-						>
-							{/* Text */}
-							<motion.span
-								initial={{ y: 0 }}
+								initial={{}}
 								whileHover={{
-									transition: {
-										type: "spring",
-										stiffness: 200,
-										damping: 10,
-									},
+									scale: 1.05,
 								}}
-								className=" z-10 flex items-center gap-2"
+								transition={{ duration: 0.3 }}
+								onMouseEnter={() => {
+									setHovered2(true);
+								}}
+								onMouseLeave={() => {
+									setHovered2(false);
+								}}
 							>
-								{/* LEFT ICON */}
-								<div className="w-5 flex justify-center items-center">
-									<AnimatePresence>
-										{!hovered2 && (
-											<motion.div
-												initial={{ x: -20 }}
-												animate={{ x: 0 }}
-												exit={{ x: -120 }}
-												transition={{
-													duration: 0.2,
-												}}
-											>
-												<FaArrowRight />
-											</motion.div>
-										)}
-									</AnimatePresence>
-								</div>{" "}
-								<span className="whitespace-nowrap">
-									Download CV
-								</span>
-								{/* RIGHT ICON */}
-								<div className="w-5 flex justify-center">
-									<AnimatePresence>
-										{hovered2 && (
-											<motion.div
-												initial={{ x: 120 }}
-												animate={{ x: 0 }}
-												exit={{ x: 120 }}
-												transition={{
-													duration: 0.2,
-												}}
-											>
-												<FaArrowRight />
-											</motion.div>
-										)}
-									</AnimatePresence>
-								</div>
-							</motion.span>
-						</motion.button>
+								{/* Text */}
+								<motion.span
+									initial={{ y: 0 }}
+									whileHover={{
+										transition: {
+											type: "spring",
+											stiffness: 200,
+											damping: 10,
+										},
+									}}
+									className=" z-10 flex items-center gap-2"
+								>
+									{/* LEFT ICON */}
+									<div className="w-5 flex justify-center items-center">
+										<AnimatePresence>
+											{!hovered2 && (
+												<motion.div
+													initial={{ x: -20 }}
+													animate={{ x: 0 }}
+													exit={{ x: -120 }}
+													transition={{
+														duration: 0.2,
+													}}
+												>
+													<FaArrowRight />
+												</motion.div>
+											)}
+										</AnimatePresence>
+									</div>{" "}
+									<span className="whitespace-nowrap">
+										Download CV
+									</span>
+									{/* RIGHT ICON */}
+									<div className="w-5 flex justify-center">
+										<AnimatePresence>
+											{hovered2 && (
+												<motion.div
+													initial={{ x: 120 }}
+													animate={{ x: 0 }}
+													exit={{ x: 120 }}
+													transition={{
+														duration: 0.2,
+													}}
+												>
+													<FaArrowRight />
+												</motion.div>
+											)}
+										</AnimatePresence>
+									</div>
+								</motion.span>
+							</motion.button>
+						</div>
 					</div>
-				</div>
 
-				{/* RIGHT */}
-				<motion.div
-					className="flex-1 order-1 md:order-2 flex items-center justify-center w-full"
-					// Pass the transformed motion values to the style prop
-					style={{ rotateX, rotateY, x: 0, y: 0 }} // x:0, y:0 is crucial to override default
-					// Use the helper functions for interaction
-					onMouseMove={(e) => {
-						handleMouseMove(e);
-					}}
-					onMouseLeave={() => {
-						handleMouseLeave();
-					}}
-					// Ensure smooth 3D perspective and transition when values change
-					transition={{ type: "tween", duration: 0.3 }}
-					whileHover={{ scale: 1.01 }} // Optional: Add a slight scale for visual feedback
-				>
-					<div className="relative w-55 h-55 md:w-90 md:h-90">
-						<img
-							src={heroPortrait}
-							className="w-full h-full object-cover rounded-full border-8 border-blue-700"
-						/>
-						<img
-							src={heroEllipse1}
-							className="absolute z-50 top-1/2 -left-1/7 transform -translate-y-20 scale-95 lg:scale-150"
-						/>
-						<img
-							src={heroEllipse2}
-							className="absolute z-50 top-1/2  -right-1/5 transform -translate-y-20 scale-95 lg:scale-150"
-						/>
-						<img
-							src={grayEllipse}
-							className="absolute top-1/2 -right-1/6 md:-right-1/12  transform -translate-y-1/2 -translate-x-1/4 scale-105  md:scale-150"
-						/>
-					</div>
-				</motion.div>
+					{/* RIGHT */}
+					<motion.div
+						className="flex-1 order-1 md:order-2 flex items-center justify-center w-full"
+						// Pass the transformed motion values to the style prop
+						style={{ rotateX, rotateY, x: 0, y: 0 }} // x:0, y:0 is crucial to override default
+						// Use the helper functions for interaction
+						onMouseMove={(e) => {
+							handleMouseMove(e);
+						}}
+						onMouseLeave={() => {
+							handleMouseLeave();
+						}}
+						// Ensure smooth 3D perspective and transition when values change
+						transition={{ type: "tween", duration: 0.3 }}
+						whileHover={{ scale: 1.01 }} // Optional: Add a slight scale for visual feedback
+					>
+						<div className="relative w-55 h-55 md:w-90 md:h-90">
+							<img
+								src={heroPortrait}
+								className="w-full h-full object-cover rounded-full border-8 border-blue-700"
+							/>
+							<img
+								src={heroEllipse1}
+								className="absolute z-50 top-1/2 -left-1/7 transform -translate-y-20 scale-95 lg:scale-150"
+							/>
+							<img
+								src={heroEllipse2}
+								className="absolute z-50 top-1/2  -right-1/5 transform -translate-y-20 scale-95 lg:scale-150"
+							/>
+							<img
+								src={grayEllipse}
+								className="absolute top-1/2 -right-1/6 md:-right-1/12  transform -translate-y-1/2 -translate-x-1/4 scale-105  md:scale-150"
+							/>
+						</div>
+					</motion.div>
+				</div>
 			</div>
-		</div>
+		</ScrollFadeIn>
 	);
 };
 
