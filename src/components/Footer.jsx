@@ -13,7 +13,7 @@ const Footer = () => {
 			id="contact"
 			className="mt-20 scroll-mt-14 pb-12 px-[5vw] md:px-[8vw] lg:px-[10vw] text-[#EDE5DB] bg-[#000000]"
 		>
-			<p className="text-center text-3xl lg:text-8xl font-[700] text-[#EDE5DB] pt-5 pb-3 md:pt-6 md:pb-6">
+			<p className="text-center text-3xl md:text-5xl lg:text-8xl font-[700] text-[#EDE5DB] pt-5 pb-3 md:pt-6 md:pb-6">
 				LET'S CONNECT!
 			</p>
 

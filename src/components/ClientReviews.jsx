@@ -151,8 +151,8 @@ const ClientReviews = () => {
 						))}
 					</CarouselContent>
 
-					<CarouselPrevious className="size-6 md:size-10 text-white border-gray-600 bg-gradient-to-b from-[#F94A5B] to-[#6A4FFF] cursor-pointer hover:scale-110 transition-all duration-200 -bottom-1/2" />
-					<CarouselNext className="size-6 md:size-10 text-white border-gray-600 bg-gradient-to-b from-[#F94A5B] to-[#6A4FFF] cursor-pointer hover:scale-110 transition-all duration-200" />
+					<CarouselPrevious className="size-6 sm:size-8 md:size-10 text-white border-gray-600 bg-gradient-to-b from-[#F94A5B] to-[#6A4FFF] cursor-pointer hover:scale-110 transition-all duration-200 -bottom-1/2" />
+					<CarouselNext className="size-6 sm:size-8 md:size-10 text-white border-gray-600 bg-gradient-to-b from-[#F94A5B] to-[#6A4FFF] cursor-pointer hover:scale-110 transition-all duration-200" />
 				</Carousel>
 			</div>
 		</div>

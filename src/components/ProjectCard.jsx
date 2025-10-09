@@ -35,7 +35,7 @@ const ProjectCard = ({ project, idx }) => {
 	return (
 		<motion.div
 			key={idx}
-			className="flex flex-col gap-2 md:gap-3 p-4 lg:p-6 rounded-2xl bg-[#11111F]/60 border-2 border-white/20 shadow-[3px_3px_5px_3px_rgba(0,0,0,0.3)]"
+			className="flex flex-col gap-2 md:gap-3 p-4 lg:p-6 rounded-2xl bg-[#11111F]/60 hover:border-1 hover:border-white hover:border-l-gray-600/80 hover:border-b-gray-600/80 shadow-[3px_3px_5px_3px_rgba(0,0,0,0.3)]"
 			// Pass the transformed motion values to the style prop
 			style={{ rotateX, rotateY, x: 0, y: 0 }} // x:0, y:0 is crucial to override default
 			// Use the helper functions for interaction
@@ -61,7 +61,7 @@ const ProjectCard = ({ project, idx }) => {
 				{project.name}
 			</p>
 
-			<p className="font-[400] text-md md:text-lg text-[#666666]">
+			<p className="font-[400] text-md md:text-lg text-[#8b8989]">
 				{project.desc}
 			</p>
 

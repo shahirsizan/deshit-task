@@ -81,7 +81,7 @@ const MyProjects = () => {
 				visually appealing and high-performing web applications.
 			</p>
 
-			<div className="grid grid-cols-1 md:grid-cols-2 xl:md:grid-cols-3 gap-3 md:gap-5">
+			<div className="grid grid-cols-1 md:grid-cols-2 xl:md:grid-cols-3 gap-3 md:gap-8">
 				{projects.map((project, idx) => {
 					return <ProjectCard project={project} ids={idx} />;
 				})}

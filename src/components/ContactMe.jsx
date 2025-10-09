@@ -46,17 +46,11 @@ const ContactMe = () => {
 				</p>
 
 				<motion.button
-					className="px-8 py-3 w-fit font-semibold border-2 border-gray-800  overflow-hidden bg-white rounded-md cursor-pointer"
-					initial={{
-						background:
-							"linear-gradient(to bottom, #ffffff, #ffffff)",
-						color: "#111827",
-					}}
+					className="px-8 py-3 w-fit font-semibold border-2 border-gray-800 overflow-hidden text-white bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF] rounded-md cursor-pointer
+					hover:border-2 hover:border-white hover:border-l-gray-600/80 hover:border-b-gray-600/80"
+					initial={{}}
 					whileHover={{
-						background:
-							"linear-gradient(to bottom, #B94A5B, #6A4FFF)",
-						color: "#ffffff",
-						scale: 1.1,
+						scale: 1.05,
 					}}
 					transition={{ duration: 0.3 }}
 					onMouseEnter={() => {

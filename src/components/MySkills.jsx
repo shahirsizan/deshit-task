@@ -14,7 +14,7 @@ const MySkills = () => {
 				My Skills
 			</p>
 
-			<div className="flex flex-col md:flex-row p-3 gap-5 bg-[#6E6E6E30]/20 px-[5vw] md:px-[8vw] lg:px-[10vw]">
+			<div className="flex flex-col md:flex-row p-3 gap-7 bg-[#6E6E6E30]/20 px-[5vw] md:px-[8vw] lg:px-[10vw]">
 				<SkillCards />
 
 				<SkillsList />

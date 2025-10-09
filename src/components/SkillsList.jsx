@@ -58,7 +58,7 @@ const SkillsList = () => {
 
 	return (
 		<motion.div
-			className="md:w-1/2 bg-[#303030] flex flex-col space-y-3 p-2 rounded-xl border-2 border-white/20 shadow-[3px_3px_5px_3px_rgba(0,0,0,0.3)]"
+			className="md:w-1/2 bg-[#303030] flex flex-col space-y-3 p-2 rounded-xl hover:border-1 hover:border-white hover:border-t-gray-600/80 hover:border-r-gray-600/80"
 			// Pass the transformed motion values to the style prop
 			style={{ rotateX, rotateY, x: 0, y: 0 }} // x:0, y:0 is crucial to override default
 			// Use the helper functions for interaction
