@@ -22,9 +22,7 @@ function App() {
 
 			<MyServices />
 
-			<ScrollFadeIn>
-				<ContactMe />
-			</ScrollFadeIn>
+			<ContactMe />
 
 			<MySkills />
 

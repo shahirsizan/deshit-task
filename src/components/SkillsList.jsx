@@ -59,7 +59,7 @@ const SkillsList = () => {
 	];
 
 	return (
-		<ScrollSlide>
+		<ScrollFadeIn>
 			<motion.div
 				className="slidingAnimation md:w-full bg-[#303030] flex flex-col space-y-3 p-2 rounded-xl hover:border-1 hover:border-white hover:border-t-gray-600/80 hover:border-r-gray-600/80"
 				// Pass the transformed motion values to the style prop
@@ -119,7 +119,7 @@ const SkillsList = () => {
 				</div>
 				<div></div>
 			</motion.div>
-		</ScrollSlide>
+		</ScrollFadeIn>
 	);
 };
 

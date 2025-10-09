@@ -2,6 +2,7 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import ScrollSlide from "./ScrollSlide";
+import ScrollFadeIn from "./ScrollFadeIn";
 
 const ServiceCard = ({ service, idx }) => {
 	// 1. Motion Values to track mouse position
@@ -34,7 +35,7 @@ const ServiceCard = ({ service, idx }) => {
 	};
 
 	return (
-		<ScrollSlide>
+		<ScrollFadeIn>
 			<motion.div
 				key={idx}
 				className="slidingAnimation space-y-4 max-sm:px-2 max-sm:py-5 max-sm:flex max-sm:flex-col max-sm:items-center max-sm:text-center sm:p-6 rounded-xl text-white bg-[#11111F]/80 
@@ -68,7 +69,7 @@ const ServiceCard = ({ service, idx }) => {
 					</span>
 				</button>
 			</motion.div>
-		</ScrollSlide>
+		</ScrollFadeIn>
 	);
 };
 

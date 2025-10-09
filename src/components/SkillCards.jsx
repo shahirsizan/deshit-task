@@ -57,7 +57,7 @@ const SkillCards = () => {
 	};
 
 	return (
-		<ScrollSlide>
+		<ScrollFadeIn>
 			<motion.div
 				className="slidingAnimation md:w-full bg-[#303030] flex flex-wrap gap-3 md:gap-4 p-3 py-4 md:p-4 md:py-5 rounded-xl hover:border-1 hover:border-white hover:border-l-gray-600/80 hover:border-b-gray-600/80"
 				// Pass the transformed motion values to the style prop
@@ -87,7 +87,7 @@ const SkillCards = () => {
 					);
 				})}
 			</motion.div>
-		</ScrollSlide>
+		</ScrollFadeIn>
 	);
 };
 
