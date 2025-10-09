@@ -25,6 +25,7 @@ import img3 from "../assets/clientImage/3.png";
 import img4 from "../assets/clientImage/4.png";
 import img5 from "../assets/clientImage/5.png";
 import ScrollSlide from "./ScrollSlide";
+import ScrollFadeIn from "./ScrollFadeIn";
 
 const ClientReviews = () => {
 	const clientReviews = [
@@ -83,7 +84,7 @@ const ClientReviews = () => {
 				Client Reviews
 			</p>
 
-			<ScrollSlide>
+			<ScrollFadeIn>
 				<div className="flex items-center justify-center">
 					<Carousel
 						opts={{
@@ -159,7 +160,7 @@ const ClientReviews = () => {
 						<CarouselNext className="size-6 sm:size-8 md:size-10 text-white border-gray-600 bg-gradient-to-b from-[#F94A5B] to-[#6A4FFF] cursor-pointer hover:scale-110 transition-all duration-200" />
 					</Carousel>
 				</div>
-			</ScrollSlide>
+			</ScrollFadeIn>
 		</div>
 	);
 };

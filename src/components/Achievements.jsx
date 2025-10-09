@@ -8,7 +8,7 @@ import ScrollSlide from "./ScrollSlide";
 
 const Achievements = () => {
 	return (
-		<ScrollSlide>
+		<ScrollFadeIn>
 			<div className="px-[5vw] md:px-[8vw] lg:px-[10vw]">
 				<div
 					className="fadeInAnimation mt-24 flex flex-col md:flex-row gap-4 md:gap-6 tracking-tighter sm:tracking-[0.3rem] md:tracking-normal 
@@ -54,7 +54,7 @@ const Achievements = () => {
 					</div>
 				</div>
 			</div>
-		</ScrollSlide>
+		</ScrollFadeIn>
 	);
 };
 

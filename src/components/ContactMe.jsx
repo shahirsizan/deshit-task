@@ -10,7 +10,7 @@ const ContactMe = () => {
 	const [hovered1, setHovered1] = useState(false);
 
 	return (
-		<ScrollSlide>
+		<ScrollFadeIn>
 			<div className="fadeInAnimation mt-24 flex flex-col md:flex-row gap-5 px-[5vw] md:px-[8vw] lg:px-[10vw]">
 				{/* LEFT */}
 				<div className="w-full md:w-1/3">
@@ -119,7 +119,7 @@ const ContactMe = () => {
 				</button> */}
 				</div>
 			</div>
-		</ScrollSlide>
+		</ScrollFadeIn>
 
 		//⚠️⚠️⚠️ By default, Flexbox gives its direct children the property `align-items: stretch`.
 		// This means the LEFT sub-div (md:w-1/3) automatically stretches to match the height
