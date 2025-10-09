@@ -26,7 +26,7 @@ const Navbar = () => {
 					#161641 100%
 				)`,
 			}}
-			className="text-white sticky top-0 z-[100] border-b-2 border-b-gray-900/70 shadow-border flex items-center justify-between py-3 px-[5vw] md:px-[8vw] lg:px-[10vw]"
+			className="text-white sticky top-0 z-[100] border-b-2 border-b-gray-900/70 shadow-border flex items-center justify-between py-4 px-[5vw] md:px-[8vw] lg:px-[10vw]"
 		>
 			<div className="font-bold">
 				<span className="text-[#B94A5B]">ARAFAT</span>

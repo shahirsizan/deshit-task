@@ -84,7 +84,7 @@ const ClientReviews = () => {
 			</p>
 
 			<ScrollSlide>
-				<div className="slidingAnimation flex items-center justify-center">
+				<div className="flex items-center justify-center">
 					<Carousel
 						opts={{
 							align: "start",

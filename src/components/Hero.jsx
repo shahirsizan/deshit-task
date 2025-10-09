@@ -50,7 +50,7 @@ const Hero = () => {
 		<ScrollFadeIn>
 			<div
 				id="about"
-				className="fadeInAnimation mt-12 scroll-mt-12 relative px-[5vw] md:px-[8vw] lg:px-[10vw]"
+				className="mt-12 scroll-mt-12 relative px-[5vw] md:px-[8vw] lg:px-[10vw]"
 			>
 				<div className="grid grid-cols-1 md:grid-cols-2">
 					{/* LEFT */}

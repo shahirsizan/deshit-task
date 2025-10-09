@@ -2,6 +2,7 @@ import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import SkillCards from "./SkillCards";
 import SkillsList from "./SkillsList";
+import ScrollFadeIn from "./ScrollFadeIn";
 
 const MySkills = () => {
 	return (
