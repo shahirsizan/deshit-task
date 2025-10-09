@@ -52,15 +52,52 @@ const Hero = () => {
 				id="about"
 				className="mt-12 scroll-mt-12 relative px-[5vw] md:px-[8vw] lg:px-[10vw]"
 			>
+				{/* Ball 1 */}
+				<div
+					className="absolute w-4 h-4 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 animate-float1 z-20"
+					style={{ top: "10%", left: "5%" }}
+				></div>
+				{/* Ball 2 */}
+				<div
+					className="absolute w-5 h-5 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 animate-float2 z-20"
+					style={{ top: "25%", right: "10%" }}
+				></div>
+				{/* Ball 3 */}
+				<div
+					className="absolute w-3 h-3 rounded-full bg-gradient-to-br from-green-300 to-blue-400 animate-float3 z-20"
+					style={{
+						bottom: "20%",
+						left: "15%",
+					}}
+				></div>
+				{/* Ball 4 */}
+				<div
+					className="absolute w-6 h-6 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 animate-float1 z-20"
+					style={{ top: "60%", left: "40%" }}
+				></div>
+				{/* Ball 5 */}
+				<div
+					className="absolute w-4 h-4 rounded-full bg-gradient-to-br from-cyan-300 to-teal-400 animate-float2 z-20"
+					style={{ bottom: "5%", right: "25%" }}
+				></div>
+				{/* Ball 6 */}
+				<div
+					className="absolute w-5 h-5 rounded-full bg-gradient-to-br from-yellow-200 to-green-500 animate-float3 z-20"
+					style={{ top: "10%", right: "40%" }}
+				></div>
+
 				<div className="grid grid-cols-1 md:grid-cols-2">
 					{/* LEFT */}
 					<div className="flex-1 order-2 md:order-1 items-center md:items-start flex flex-col space-y-10">
-						<p className="font-[700] text-lg sm:text-4xl text-white pt-4 whitespace-nowrap">
+						<p className="font-[700] text-lg sm:text-4xl text-white pt-4 whitespace-nowrap relative z-30">
 							I am <span className="text-[#B94A5B]">ARAFAT</span>{" "}
 							HOSSAIN SOBUJ
 						</p>
 
-						<p className=" bg-[#2A2A3A94] rounded-lg text-[#FFFFFF] text-xs sm:text-lg md:text-sm md:font-[600] tracking-widest leading-loose py-4 md:py-8 px-2 sm:px-4 lg:px-10 whitespace-nowrap">
+						<p
+							className=" bg-[#2A2A3A94] rounded-lg text-[#FFFFFF] text-xs sm:text-lg md:text-sm md:font-[600] 
+						tracking-widest leading-loose py-4 md:py-8 px-2 sm:px-4 lg:px-10 whitespace-nowrap relative z-30"
+						>
 							<span>Full-Stack Mobile App Developer</span>
 							<span className="max-xl:hidden">{" | "}</span>
 							<br className="xl:hidden" />
@@ -74,7 +111,7 @@ const Hero = () => {
 							<span>40+ Successful Projects Delivered</span>
 						</p>
 
-						<div className="flex flex-col space-y-4">
+						<div className="flex flex-col space-y-4 relative z-30">
 							<p className=" text-white font-[600] text-sm sm:text-2xl xl:text-3xl text-center md:text-start ">
 								Maximize Your Business
 								<br />
@@ -96,7 +133,7 @@ const Hero = () => {
 						</div>
 
 						{/* BUTTONS */}
-						<div className="flex flex-col sm:flex-row items-center gap-5">
+						<div className="flex flex-col sm:flex-row items-center gap-5 relative z-30">
 							{/* BUTTON 1 */}
 							<motion.button
 								className="px-8 py-3 font-semibold border-2 border-gray-800  overflow-hidden text-white bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF] rounded-md cursor-pointer
