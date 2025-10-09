@@ -21,17 +21,25 @@ function App() {
 				<MyServices />
 			</ScrollFadeIn>
 
-			<ContactMe />
+			<ScrollFadeIn>
+				<ContactMe />
+			</ScrollFadeIn>
 
-			<MySkills />
+			<ScrollFadeIn>
+				<MySkills />
+			</ScrollFadeIn>
 
 			<ScrollFadeIn>
 				<MyProjects />
 			</ScrollFadeIn>
 
-			<ClientReviews />
+			<ScrollFadeIn>
+				<ClientReviews />
+			</ScrollFadeIn>
 
-			<Footer />
+			<ScrollFadeIn>
+				<Footer />
+			</ScrollFadeIn>
 		</div>
 	);
 }
