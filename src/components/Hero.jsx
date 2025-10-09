@@ -273,25 +273,25 @@ const Hero = () => {
 			</div>
 
 			{/* BOTTOM */}
-			<div className="mt-24 flex flex-col md:flex-row md:gap-5 items-center md:justify-between text-white px-5 py-4 md:px-7 md:py-6 rounded-3xl bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF]">
+			<div className="mt-24 flex flex-col md:flex-row md:gap-6 max-md:tracking-[0.2rem] items-center md:justify-between text-white px-5 py-5 md:px-6 md:py-6 rounded-3xl bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF]">
 				<div className="flex flex-col space-y-1 md:space-y-3 pb-6 items-center md:items-start">
 					<CiCalendar className="max-md:hidden text-3xl" />
 					<span className="text-xl md:text-3xl font-bold">9+</span>
-					<span className="font-[700] text-xl text-[#FFFFFF87]">
+					<span className="font-[700] text-3xl md:text-xl text-[#FFFFFF87]">
 						Years of Experience
 					</span>
 				</div>
 				<div className="flex flex-col space-y-1 md:space-y-3 pb-6 items-center md:items-start ">
 					<CiLaptop className="max-md:hidden text-3xl" />
 					<span className="text-xl md:text-3xl font-bold">40+ </span>
-					<span className="font-[700] text-xl text-[#FFFFFF87]">
+					<span className="font-[700] text-3xl md:text-xl text-[#FFFFFF87]">
 						Projects Completed
 					</span>
 				</div>
 				<div className="flex flex-col space-y-1 md:space-y-3 pb-6 items-center md:items-start">
 					<FaRegSmile className="max-md:hidden text-3xl" />
 					<span className="text-xl md:text-3xl font-bold">300+ </span>
-					<span className="font-[700] text-xl text-[#FFFFFF87]">
+					<span className="font-[700] text-3xl md:text-xl text-[#FFFFFF87]">
 						Satisfied Client
 					</span>
 				</div>
@@ -299,8 +299,8 @@ const Hero = () => {
 				<div className="flex flex-col space-y-1 md:space-y-3 pb-6 items-center md:items-start">
 					<SlBadge className="max-md:hidden text-3xl" />
 					<span className="text-xl md:text-3xl font-bold">18+ </span>
-					<span className="font-[700] text-xl text-[#FFFFFF87]">
-						Award Won
+					<span className="font-[700] text-3xl md:text-xl text-[#FFFFFF87]">
+						Awards Won
 					</span>
 				</div>
 			</div>
