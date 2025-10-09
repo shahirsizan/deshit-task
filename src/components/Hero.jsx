@@ -95,7 +95,7 @@ const Hero = () => {
 					</div>
 
 					{/* BUTTONS */}
-					<div className="flex flex-col md:flex-row items-center gap-5">
+					<div className="flex flex-col sm:flex-row items-center gap-5">
 						{/* BUTTON 1 */}
 						<motion.button
 							className="px-8 py-3 font-semibold border-2 border-gray-800  overflow-hidden text-white bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF] rounded-md cursor-pointer
