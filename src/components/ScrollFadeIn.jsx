@@ -13,12 +13,12 @@ const ScrollFadeIn = ({ children }) => {
 				}
 				// when stepping outside the viewport
 				else {
-					ref.current.classList.add("animate-fadeout");
 					ref.current.classList.remove("animate-fadein");
+					ref.current.classList.add("animate-fadeout");
 				}
 			},
 			{
-				threshold: 0.05,
+				threshold: 0.2,
 			}
 		);
 		if (ref.current) {

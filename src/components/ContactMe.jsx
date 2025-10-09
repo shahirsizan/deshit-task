@@ -8,7 +8,7 @@ const ContactMe = () => {
 	const [hovered1, setHovered1] = useState(false);
 
 	return (
-		<div className="mt-24 flex flex-col md:flex-row gap-5 px-[5vw] md:px-[8vw] lg:px-[10vw]">
+		<div className="fadeInAnimation mt-24 flex flex-col md:flex-row gap-5 px-[5vw] md:px-[8vw] lg:px-[10vw]">
 			{/* LEFT */}
 			<div className="w-full md:w-1/3">
 				{/*⚠️ uporer div e `h-full` dile image `shrinked` hoye jay. 

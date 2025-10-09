@@ -36,7 +36,7 @@ const ServiceCard = ({ service, idx }) => {
 		<div>
 			<motion.div
 				key={idx}
-				className="space-y-4 max-sm:px-2 max-sm:py-5 max-sm:flex max-sm:flex-col max-sm:items-center max-sm:text-center sm:p-6 rounded-xl text-white bg-[#11111F]/80 
+				className="slidingAnimation space-y-4 max-sm:px-2 max-sm:py-5 max-sm:flex max-sm:flex-col max-sm:items-center max-sm:text-center sm:p-6 rounded-xl text-white bg-[#11111F]/80 
 							hover:bg-gradient-to-b hover:from-[#B94A5B] hover:via-[#6A4FFF] hover:to-[#6A4FFF] 
 							shadow-[5px_5px_5px_-3px_rgba(0,0,0,0.5)] hover:border-1 hover:border-white hover:border-l-gray-600/80 hover:border-b-gray-600/80"
 				// Pass the transformed motion values to the style prop

@@ -6,10 +6,7 @@ import {
 	useTransform,
 } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
-import { CiCalendar } from "react-icons/ci";
-import { CiLaptop } from "react-icons/ci";
-import { FaRegSmile } from "react-icons/fa";
-import { SlBadge } from "react-icons/sl";
+
 import heroPortrait from "../assets/heroPortrait.png";
 import heroEllipse1 from "../assets/heroEllipse1.png";
 import heroEllipse2 from "../assets/heroEllipse2.png";
@@ -51,17 +48,17 @@ const Hero = () => {
 	return (
 		<div
 			id="about"
-			className="mt-12 scroll-mt-12 relative px-[5vw] md:px-[8vw] lg:px-[10vw]"
+			className="fadeInAnimation mt-12 scroll-mt-12 relative px-[5vw] md:px-[8vw] lg:px-[10vw]"
 		>
 			<div className="grid grid-cols-1 md:grid-cols-2">
 				{/* LEFT */}
 				<div className="flex-1 order-2 md:order-1 items-center md:items-start flex flex-col space-y-10">
-					<p className="font-[700] text-lg sm:text-2xl md:text-3xl text-white pt-4 whitespace-nowrap">
+					<p className="font-[700] text-lg sm:text-4xl text-white pt-4 whitespace-nowrap">
 						I am <span className="text-[#B94A5B]">ARAFAT</span>{" "}
 						HOSSAIN SOBUJ
 					</p>
 
-					<p className=" bg-[#2A2A3A94] rounded-lg text-[#FFFFFF] text-xs sm:text-sm md:text-md md:font-[500] tracking-widest leading-loose py-4 md:py-8 px-2 sm:px-4 lg:px-10 whitespace-nowrap">
+					<p className=" bg-[#2A2A3A94] rounded-lg text-[#FFFFFF] text-xs sm:text-lg md:text-sm md:font-[600] tracking-widest leading-loose py-4 md:py-8 px-2 sm:px-4 lg:px-10 whitespace-nowrap">
 						<span>Full-Stack Mobile App Developer</span>
 						<span className="max-xl:hidden">{" | "}</span>
 						<br className="xl:hidden" />
@@ -270,39 +267,6 @@ const Hero = () => {
 						/>
 					</div>
 				</motion.div>
-			</div>
-
-			{/* BOTTOM */}
-			<div className="mt-24 flex flex-col md:flex-row md:gap-6 max-md:tracking-[0.2rem] items-center md:justify-between text-white px-5 py-5 md:px-6 md:py-6 rounded-3xl bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF]">
-				<div className="flex flex-col space-y-1 md:space-y-3 pb-6 items-center md:items-start">
-					<CiCalendar className="max-md:hidden text-3xl" />
-					<span className="text-xl md:text-3xl font-bold">9+</span>
-					<span className="font-[700] text-3xl md:text-xl text-[#FFFFFF87]">
-						Years of Experience
-					</span>
-				</div>
-				<div className="flex flex-col space-y-1 md:space-y-3 pb-6 items-center md:items-start ">
-					<CiLaptop className="max-md:hidden text-3xl" />
-					<span className="text-xl md:text-3xl font-bold">40+ </span>
-					<span className="font-[700] text-3xl md:text-xl text-[#FFFFFF87]">
-						Projects Completed
-					</span>
-				</div>
-				<div className="flex flex-col space-y-1 md:space-y-3 pb-6 items-center md:items-start">
-					<FaRegSmile className="max-md:hidden text-3xl" />
-					<span className="text-xl md:text-3xl font-bold">300+ </span>
-					<span className="font-[700] text-3xl md:text-xl text-[#FFFFFF87]">
-						Satisfied Client
-					</span>
-				</div>
-
-				<div className="flex flex-col space-y-1 md:space-y-3 pb-6 items-center md:items-start">
-					<SlBadge className="max-md:hidden text-3xl" />
-					<span className="text-xl md:text-3xl font-bold">18+ </span>
-					<span className="font-[700] text-3xl md:text-xl text-[#FFFFFF87]">
-						Awards Won
-					</span>
-				</div>
 			</div>
 		</div>
 	);

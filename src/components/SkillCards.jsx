@@ -31,8 +31,8 @@ const SkillCards = () => {
 
 	// 2. Map mouse position (0-width, 0-height) to a rotation range (-5 to 5 degrees)
 	// The 'rotateX' and 'rotateY' properties are 3D rotations, creating the tilt effect.
-	const rotateX = useTransform(y, [0, 100], [8, -5]);
-	const rotateY = useTransform(x, [0, 100], [-5, 8]);
+	const rotateX = useTransform(y, [0, 100], [12, -5]);
+	const rotateY = useTransform(x, [0, 100], [-5, 12]);
 
 	// Function to capture the mouse position relative to the element
 	const handleMouseMove = (e) => {
@@ -56,7 +56,7 @@ const SkillCards = () => {
 
 	return (
 		<motion.div
-			className="md:w-1/2 bg-[#303030] flex flex-wrap gap-3 md:gap-4 p-3 py-4 md:p-4 md:py-5 rounded-xl hover:border-1 hover:border-white hover:border-l-gray-600/80 hover:border-b-gray-600/80"
+			className="slidingAnimation md:w-1/2 bg-[#303030] flex flex-wrap gap-3 md:gap-4 p-3 py-4 md:p-4 md:py-5 rounded-xl hover:border-1 hover:border-white hover:border-l-gray-600/80 hover:border-b-gray-600/80"
 			// Pass the transformed motion values to the style prop
 			style={{ rotateX, rotateY, x: 0, y: 0 }} // x:0, y:0 is crucial to override default
 			// Use the helper functions for interaction
