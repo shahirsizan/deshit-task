@@ -56,19 +56,27 @@ const Hero = () => {
 			<div className="grid grid-cols-1 md:grid-cols-2">
 				{/* LEFT */}
 				<div className="flex-1 order-2 md:order-1 items-center md:items-start flex flex-col space-y-10">
-					<p className="font-[700] text-lg md:text-3xl text-base text-white pt-4 whitespace-nowrap">
+					<p className="font-[700] text-lg sm:text-2xl md:text-3xl text-white pt-4 whitespace-nowrap">
 						I am <span className="text-[#B94A5B]">ARAFAT</span>{" "}
 						HOSSAIN SOBUJ
 					</p>
 
-					<p className=" bg-[#2A2A3A94] rounded-lg text-[#FFFFFF] text-xs md:text-lg md:font-[700] py-4 px-5">
-						Full-Stack Mobile App Developer <br />
-						9+ Years Experience <br />
-						40+ Projects Delivered
+					<p className=" bg-[#2A2A3A94] rounded-lg text-[#FFFFFF] text-xs sm:text-sm md:text-md md:font-[500] tracking-widest leading-loose py-4 md:py-8 px-2 sm:px-4 lg:px-10 whitespace-nowrap">
+						<span>Full-Stack Mobile App Developer</span>
+						<span className="max-xl:hidden">{" | "}</span>
+						<br className="xl:hidden" />
+						<span>9+ Years Experience</span>
+
+						<br />
+
+						<span>Expert in Flutter & Node.js</span>
+						<span className="max-xl:hidden">{" | "}</span>
+						<br className="xl:hidden" />
+						<span>40+ Successful Projects Delivered</span>
 					</p>
 
 					<div className="flex flex-col space-y-4">
-						<p className=" text-white font-[600] text-sm text-center md:text-start md:text-2xl">
+						<p className=" text-white font-[600] text-sm sm:text-2xl xl:text-3xl text-center md:text-start ">
 							Maximize Your Business
 							<br />
 							<span className="text-[#B94A5B]">
@@ -80,7 +88,7 @@ const Hero = () => {
 							<span className="text-[#6A4FFF]">Solutions!</span>
 						</p>
 
-						<p className="text-sm text-[#DBB9B9] text-center md:text-start">
+						<p className="text-sm sm:text-lg xl:text-2xl text-[#DBB9B9] text-center md:text-start">
 							Take your business to the next level with
 							<br /> custom web development solutions.
 						</p>
@@ -90,7 +98,8 @@ const Hero = () => {
 					<div className="flex flex-col md:flex-row items-center gap-5">
 						{/* BUTTON 1 */}
 						<motion.button
-							className="px-8 py-3 font-semibold border-2 border-gray-800  overflow-hidden text-white bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF] rounded-md cursor-pointer"
+							className="px-8 py-3 font-semibold border-2 border-gray-800  overflow-hidden text-white bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF] rounded-md cursor-pointer
+							hover:border-2 hover:border-white hover:border-l-gray-600/80 hover:border-b-gray-600/80"
 							initial={{}}
 							whileHover={{
 								scale: 1.05,
@@ -158,7 +167,8 @@ const Hero = () => {
 
 						{/* BUTTON 2 */}
 						<motion.button
-							className="px-8 py-3 font-semibold border-2 border-gray-800 overflow-hidden text-white bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF] rounded-md cursor-pointer"
+							className="px-8 py-3 font-semibold border-2 border-gray-800 overflow-hidden text-white bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF] rounded-md cursor-pointer
+							hover:border-2 hover:border-white hover:border-l-gray-600/80 hover:border-b-gray-600/80"
 							initial={{}}
 							whileHover={{
 								scale: 1.05,
@@ -248,11 +258,11 @@ const Hero = () => {
 						/>
 						<img
 							src={heroEllipse1}
-							className="absolute z-50 top-1/2 -left-1/7 transform -translate-y-20  md:scale-150"
+							className="absolute z-50 top-1/2 -left-1/7 transform -translate-y-20 scale-95 lg:scale-150"
 						/>
 						<img
 							src={heroEllipse2}
-							className="absolute z-50 top-1/2  -right-1/5  transform -translate-y-20  md:scale-150"
+							className="absolute z-50 top-1/2  -right-1/5 transform -translate-y-20 scale-95 lg:scale-150"
 						/>
 						<img
 							src={grayEllipse}
@@ -266,27 +276,21 @@ const Hero = () => {
 			<div className="mt-24 flex flex-col md:flex-row md:gap-5 items-center md:justify-between text-white px-5 py-4 md:px-7 md:py-6 rounded-3xl bg-gradient-to-b from-[#B94A5B] via-[#6A4FFF] to-[#6A4FFF]">
 				<div className="flex flex-col space-y-1 md:space-y-3 pb-6 items-center md:items-start">
 					<CiCalendar className="max-md:hidden text-3xl" />
-					<span className="text-xl md:text-3xl font-semibold">
-						9+
-					</span>
+					<span className="text-xl md:text-3xl font-bold">9+</span>
 					<span className="font-[700] text-xl text-[#FFFFFF87]">
 						Years of Experience
 					</span>
 				</div>
 				<div className="flex flex-col space-y-1 md:space-y-3 pb-6 items-center md:items-start ">
 					<CiLaptop className="max-md:hidden text-3xl" />
-					<span className="text-xl md:text-3xl font-semibold">
-						40+{" "}
-					</span>
+					<span className="text-xl md:text-3xl font-bold">40+ </span>
 					<span className="font-[700] text-xl text-[#FFFFFF87]">
 						Projects Completed
 					</span>
 				</div>
 				<div className="flex flex-col space-y-1 md:space-y-3 pb-6 items-center md:items-start">
 					<FaRegSmile className="max-md:hidden text-3xl" />
-					<span className="text-xl md:text-3xl font-semibold">
-						300+{" "}
-					</span>
+					<span className="text-xl md:text-3xl font-bold">300+ </span>
 					<span className="font-[700] text-xl text-[#FFFFFF87]">
 						Satisfied Client
 					</span>
@@ -294,9 +298,7 @@ const Hero = () => {
 
 				<div className="flex flex-col space-y-1 md:space-y-3 pb-6 items-center md:items-start">
 					<SlBadge className="max-md:hidden text-3xl" />
-					<span className="text-xl md:text-3xl font-semibold">
-						18+{" "}
-					</span>
+					<span className="text-xl md:text-3xl font-bold">18+ </span>
 					<span className="font-[700] text-xl text-[#FFFFFF87]">
 						Award Won
 					</span>
