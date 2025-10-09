@@ -127,3 +127,25 @@ html {
 		@apply bg-background text-foreground;
 	}
 }
+
+@theme {
+	--animate-fadein: fadein 1.5s ease-out forwards;
+	--animate-fadeout: fadeout 1.5s ease-out forwards;
+
+	@keyframes fadein {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 100;
+		}
+	}
+	@keyframes fadeout {
+		0% {
+			opacity: 100;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+}

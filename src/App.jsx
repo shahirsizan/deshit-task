@@ -6,17 +6,31 @@ import MySkills from "./components/MySkills";
 import MyProjects from "./components/MyProjects";
 import ClientReviews from "./components/ClientReviews";
 import Footer from "./components/Footer";
+import ScrollFadeIn from "./components/ScrollFadeIn";
+import { Scroll } from "lucide-react";
 
 function App() {
 	return (
 		<div className="relative min-h-screen">
 			<Navbar />
-			<Hero />
-			<MyServices />
+			<ScrollFadeIn>
+				<Hero />
+			</ScrollFadeIn>
+
+			<ScrollFadeIn>
+				<MyServices />
+			</ScrollFadeIn>
+
 			<ContactMe />
+
 			<MySkills />
-			<MyProjects />
+
+			<ScrollFadeIn>
+				<MyProjects />
+			</ScrollFadeIn>
+
 			<ClientReviews />
+
 			<Footer />
 		</div>
 	);
