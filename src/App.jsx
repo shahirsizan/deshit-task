@@ -31,34 +31,6 @@ function App() {
 			<ClientReviews />
 
 			<Footer />
-
-			{/* <ScrollFadeIn>
-				<Hero />
-			</ScrollFadeIn>
-
-			<ScrollFadeIn>
-				<MyServices />
-			</ScrollFadeIn>
-
-			<ScrollFadeIn>
-				<ContactMe />
-			</ScrollFadeIn>
-
-			<ScrollFadeIn>
-				<MySkills />
-			</ScrollFadeIn>
-
-			<ScrollFadeIn>
-				<MyProjects />
-			</ScrollFadeIn>
-
-			<ScrollFadeIn>
-				<ClientReviews />
-			</ScrollFadeIn>
-
-			<ScrollFadeIn>
-				<Footer />
-			</ScrollFadeIn> */}
 		</div>
 	);
 }
