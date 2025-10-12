@@ -85,8 +85,8 @@ const Hero = () => {
 					{/* LEFT */}
 					<div className="flex-1 order-2 md:order-1 items-center md:items-start flex flex-col space-y-10">
 						<p className="font-[700] text-lg sm:text-4xl text-white pt-4 whitespace-nowrap relative z-30">
-							I am <span className="text-[#B94A5B]">ARAFAT</span>{" "}
-							HOSSAIN SOBUJ
+							I am <span className="text-[#B94A5B]">SHAHIR</span>{" "}
+							ADIL SIZAN
 						</p>
 
 						<p

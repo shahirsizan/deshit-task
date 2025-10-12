@@ -29,8 +29,8 @@ const Navbar = () => {
 			className="text-white sticky top-0 z-[100] border-b-2 border-b-gray-900/70 shadow-border flex items-center justify-between py-4 px-[5vw] md:px-[8vw] lg:px-[10vw]"
 		>
 			<div className="font-bold">
-				<span className="text-[#B94A5B]">ARAFAT</span>
-				<span className="max-md:hidden"> HOSSAIN SOBUJ</span>
+				<span className="text-[#B94A5B]">SHAHIR</span>
+				<span className="max-md:hidden"> ADIL SIZAN</span>
 			</div>
 
 			<div className="hidden md:flex items-center space-x-5 font-semibold text-sm text-base">
